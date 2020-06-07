@@ -8,6 +8,7 @@
 
     @include clearfix;
 
+    //Wszystkie klasy zawierające col-
     [class^="col-"] {
         float: left;
 
