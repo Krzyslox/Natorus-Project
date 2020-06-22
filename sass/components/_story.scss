@@ -9,6 +9,16 @@
     font-size: $default-font-size;
     transform: skewX(-12deg);
 
+    @include respond(tab-port) {
+        width: 100%;
+        padding: 4rem;
+    padding-left: 7rem;
+    }
+
+    @include respond(phone) {
+        transform: skewX(0);
+    }
+
     //Pozwala odchylić text i obrazek do pionu
 
     &__shape {
@@ -27,6 +37,10 @@
         position: relative;
 
         overflow: hidden;
+
+        @include respond(phone) {
+            transform: translateX(-3rem) skewX(0);
+        }
     }
 
     &__img {
@@ -39,6 +53,10 @@
     &__text {
         //Odwraca obrazek do pionu
         transform: skewX(12deg);
+
+        @include respond(phone) {
+            transform: skewX(0);
+        }
     }
 
     &__caption {
